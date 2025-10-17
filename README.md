@@ -1,1 +1,1 @@
-# coro-karnataka-lucky-draw
+# coro-lucky-draw
