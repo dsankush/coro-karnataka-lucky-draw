@@ -26,7 +26,6 @@
       background-attachment: fixed;
     }
     
-    /* Professional overlay for better contrast */
     .full-page::before {
       content: "";
       position: absolute;
@@ -85,7 +84,6 @@
       animation: spin 5.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
     }
 
-    /* Professional Spinning Wheel */
     .fantastic-wheel {
       width: 320px;
       height: 320px;
@@ -205,7 +203,6 @@
       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
     }
 
-    /* Professional spin animation */
     @keyframes professionalSpin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(3600deg); }
@@ -245,7 +242,6 @@
       }
     }
     
-    /* Enhanced carousel styling */
     .carousel-container {
       background: transparent;
       backdrop-filter: none;
@@ -284,13 +280,13 @@
       transform: translateX(80px) scale(0.8);
     }
     
-    /* Winners Table in Carousel - QUIRKY LUCKY DRAW THEME */
+    /* UPDATED font sizes per requirements */
     .table-title {
       background: linear-gradient(135deg, #ec4899 0%, #f97316 50%, #eab308 100%);
-      padding: 16px;
+      padding: 20px 16px;
       text-align: center;
       color: white;
-      font-size: 24px;
+      font-size: 28px; /* updated from 24px */
       font-weight: 900;
       border-radius: 12px 12px 0 0;
       text-shadow: 
@@ -328,20 +324,16 @@
     }
     
     @keyframes headerSlide {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 200% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
     }
     
     .winners-table thead th {
-      padding: 10px;
+      padding: 14px 10px; /* increased padding for bigger font */
       text-align: center;
       color: #fff;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 18px; /* updated from 13px */
       text-transform: uppercase;
       border-bottom: 3px solid #fbbf24;
       letter-spacing: 0.5px;
@@ -366,18 +358,16 @@
     }
     
     .winners-table tbody td {
-      padding: 8px 10px;
+      padding: 18px 10px; /* more padding for single-row display */
       border-bottom: 1px solid rgba(251, 191, 36, 0.2);
-      font-size: 20px;
+      font-size: 18px; /* updated from 20px */
       color: #1f2937;
       font-weight: 500;
       text-align: center;
     }
     
-    /* Highlight top 3 winners with quirky style */
-    .winners-table tbody tr:first-child,
-    .winners-table tbody tr:nth-child(2),
-    .winners-table tbody tr:nth-child(3) {
+    /* Highlight winner row — single row always gets top style */
+    .winners-table tbody tr:first-child {
       background: linear-gradient(90deg, #fef9c3 0%, #fef3c7 50%, #fef9c3 100%);
       border-left: 5px solid #eab308;
       font-weight: 600;
@@ -385,27 +375,30 @@
     }
     
     @keyframes topWinnerPulse {
-      0%, 100% {
-        box-shadow: 0 0 0 rgba(234, 179, 8, 0.4);
-      }
-      50% {
-        box-shadow: 0 0 15px rgba(234, 179, 8, 0.4);
-      }
+      0%, 100% { box-shadow: 0 0 0 rgba(234, 179, 8, 0.4); }
+      50% { box-shadow: 0 0 15px rgba(234, 179, 8, 0.4); }
     }
     
-    /* Serial number styling */
     .sr-number {
       font-weight: 700;
-      font-size: 16px;
+      font-size: 18px; /* updated from 16px */
       color: #1f2937;
     }
-    
-    .sr-number.top-1,
-    .sr-number.top-2,
-    .sr-number.top-3 {
+
+    /* Winner rank badge */
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 20px;
       font-weight: 800;
+      background: linear-gradient(135deg, #facc15, #f59e0b);
+      color: #78350f;
+      box-shadow: 0 4px 12px rgba(250, 204, 21, 0.5);
     }
-    
     
     .control-button {
       background: linear-gradient(135deg, #facc15 0%, #f59e0b 100%);
@@ -428,12 +421,8 @@
     }
     
     @keyframes buttonWiggle {
-      0%, 100% {
-        transform: translateY(-3px) scale(1.05) rotate(-1deg);
-      }
-      50% {
-        transform: translateY(-3px) scale(1.05) rotate(1deg);
-      }
+      0%, 100% { transform: translateY(-3px) scale(1.05) rotate(-1deg); }
+      50% { transform: translateY(-3px) scale(1.05) rotate(1deg); }
     }
     
     .close-button {
@@ -469,12 +458,8 @@
     }
     
     @keyframes dotPulse {
-      0%, 100% {
-        box-shadow: 0 4px 12px rgba(251, 191, 36, 0.6);
-      }
-      50% {
-        box-shadow: 0 6px 18px rgba(251, 191, 36, 0.9);
-      }
+      0%, 100% { box-shadow: 0 4px 12px rgba(251, 191, 36, 0.6); }
+      50% { box-shadow: 0 6px 18px rgba(251, 191, 36, 0.9); }
     }
     
     .dot-indicator:not(.active) {
@@ -484,17 +469,29 @@
     .dot-indicator:hover {
       transform: scale(1.2);
     }
+
+    /* Dots scroll container for many dots */
+    .dots-scroll {
+      max-width: 500px;
+      overflow-x: auto;
+      padding: 6px 4px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(251,191,36,0.5) transparent;
+    }
+
+    /* Counter label */
+    .counter-label {
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
     
-    /* Confetti animation */
     @keyframes confettiFall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) rotate(720deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
     }
     
   </style>
@@ -516,35 +513,16 @@
     <div id="wheelContainer" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden">
       <button id="wheelButton" class="relative">
         <div id="wheelImage" class="fantastic-wheel">
-          <!-- Wheel Pointer -->
           <div class="wheel-pointer"></div>
-          
-          <!-- Wheel Segments -->
           <div class="wheel-segments">
-            <div class="wheel-segment">
-              <div class="wheel-symbol">⭐</div>
-            </div>
-            <div class="wheel-segment">
-              <div class="wheel-symbol">💎</div>
-            </div>
-            <div class="wheel-segment">
-              <div class="wheel-symbol">🏆</div>
-            </div>
-            <div class="wheel-segment">
-              <div class="wheel-symbol">🎁</div>
-            </div>
-            <div class="wheel-segment">
-              <div class="wheel-symbol">💰</div>
-            </div>
-            <div class="wheel-segment">
-              <div class="wheel-symbol">👑</div>
-            </div>
-            <div class="wheel-segment">
-              <div class="wheel-symbol">🎊</div>
-            </div>
+            <div class="wheel-segment"><div class="wheel-symbol">⭐</div></div>
+            <div class="wheel-segment"><div class="wheel-symbol">💎</div></div>
+            <div class="wheel-segment"><div class="wheel-symbol">🏆</div></div>
+            <div class="wheel-segment"><div class="wheel-symbol">🎁</div></div>
+            <div class="wheel-segment"><div class="wheel-symbol">💰</div></div>
+            <div class="wheel-segment"><div class="wheel-symbol">👑</div></div>
+            <div class="wheel-segment"><div class="wheel-symbol">🎊</div></div>
           </div>
-          
-          <!-- Wheel Center -->
           <div class="wheel-center">SPIN</div>
         </div>
       </button>
@@ -555,8 +533,13 @@
       <div class="carousel-container flex flex-col items-center" style="max-width: 900px; width: 100%; max-height: 90vh;">
         <div id="carouselContent" class="carousel-content w-full"></div>
 
+        <!-- Counter -->
+        <div id="counterLabel" class="counter-label mt-3"></div>
+
         <!-- Dots Indicator -->
-        <div id="carouselDots" class="flex justify-center mt-4 gap-2"></div>
+        <div class="dots-scroll">
+          <div id="carouselDots" class="flex justify-center gap-2" style="min-width: max-content;"></div>
+        </div>
 
         <!-- Controls -->
         <div class="mt-4 flex gap-4">
@@ -569,7 +552,6 @@
 
   </div>
 
-  <!-- JavaScript -->
   <script>
     const startButton = document.getElementById("startButton");
     const initialButtonContainer = document.getElementById("initialButtonContainer");
@@ -579,94 +561,77 @@
     const carouselContainer = document.getElementById("carouselContainer");
     const carouselContent = document.getElementById("carouselContent");
     const carouselDots = document.getElementById("carouselDots");
+    const counterLabel = document.getElementById("counterLabel");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
     const closeCarousel = document.getElementById("closeCarousel");
 
+    // carouselItems: 1 winner per slide (changed from 10)
     let carouselItems = [];
     let winnersData = [];
     let currentIndex = 0;
     let hasSpun = false;
     let dataLoaded = false;
     
-    // Load winners data from CSV
     function loadWinnersData(callback) {
       Papa.parse('https://raw.githubusercontent.com/dsankush/coro-karnataka-lucky-draw/main/Karnataka/w5d.csv', {
         download: true,
         header: true,
         complete: function(results) {
-          console.log('CSV loaded, raw data:', results.data.length, 'rows');
-          console.log('Column names:', results.meta.fields);
-          console.log('First row sample:', results.data[0]);
-          
           winnersData = results.data.filter(row => 
             row['Farmer Name'] && row['Farmer Name'].trim() !== ''
           );
           
-          console.log('Filtered winners:', winnersData.length);
-          
-          // Split winners into groups of 10
-          carouselItems = [];
-          for (let i = 0; i < winnersData.length; i += 10) {
-            carouselItems.push(winnersData.slice(i, i + 10));
-          }
+          // ONE winner per carousel slide
+          carouselItems = winnersData.map((winner, index) => ({ winner, index }));
           
           dataLoaded = true;
-          console.log(`Loaded ${winnersData.length} winners in ${carouselItems.length} tables`);
+          console.log(`Loaded ${winnersData.length} winners — 1 per slide = ${carouselItems.length} slides`);
           
           if (callback) callback();
         },
         error: function(error) {
           console.error('Error loading CSV:', error);
-          carouselItems = [[]]; // Empty table
+          carouselItems = [];
           dataLoaded = true;
           if (callback) callback();
         }
       });
     }
     
-    // Load data on page load
     loadWinnersData();
     
-    function createTableHTML(winners, startIndex) {
-      if (winners.length === 0) {
+    function getRankEmoji(globalIndex) {
+      if (globalIndex === 0) return '🥇';
+      if (globalIndex === 1) return '🥈';
+      if (globalIndex === 2) return '🥉';
+      return '🎖️';
+    }
+
+    function createTableHTML(item) {
+      if (!item) {
         return `
           <div class="table-title">🏆 Lucky Draw Winners 🏆</div>
-          <div style="padding: 40px; text-align: center; color: #6366f1;">
+          <div style="padding: 40px; text-align: center; color: #6366f1; font-size:20px;">
             Loading winners...
           </div>
         `;
       }
       
-      const tableRows = winners.map((winner, idx) => {
-        const globalIndex = startIndex + idx;
-        const rankNum = globalIndex + 1;
-        const farmerName = winner['Farmer Name'] || '-';
-        const mobile = winner['Mobile Number'] || '-';
-        const district = winner['District'] || '-';
-        const headquarter = winner['Headquater'] || '-';
-        
-        const srClass = globalIndex === 0 ? 'top-1' : globalIndex === 1 ? 'top-2' : globalIndex === 2 ? 'top-3' : '';
-        
-        return `
-          <tr>
-            <td>
-              <span class="sr-number ${srClass}">${rankNum}</span>
-            </td>
-            <td>${farmerName}</td>
-            <td>${mobile}</td>
-            <td>${district}</td>
-            <td>${headquarter}</td>
-          </tr>
-        `;
-      }).join('');
-      
+      const { winner, index } = item;
+      const rankNum = index + 1;
+      const farmerName = winner['Farmer Name'] || '-';
+      const mobile = winner['Mobile Number'] || '-';
+      const district = winner['District'] || '-';
+      const headquarter = winner['Headquater'] || '-';
+      const emoji = getRankEmoji(index);
+
       return `
-        <div class="table-title">✨ LUCKY DRAW WINNERS ✨</div>
+        <div class="table-title">✨ LUCKY DRAW WINNER ✨</div>
         <table class="winners-table">
           <thead>
             <tr>
-              <th style="width: 80px;">🎯 NO.</th>
+              <th style="width: 90px;">🎯 NO.</th>
               <th style="width: 28%;">👨‍🌾 FARMER NAME</th>
               <th style="width: 21%;">📱 MOBILE</th>
               <th style="width: 20%;">🏙️ DISTRICT</th>
@@ -674,24 +639,35 @@
             </tr>
           </thead>
           <tbody>
-            ${tableRows}
+            <tr>
+              <td>
+                <div class="rank-badge">${rankNum}</div>
+                <div style="font-size:24px; margin-top:4px;">${emoji}</div>
+              </td>
+              <td style="font-size:20px; font-weight:700;">${farmerName}</td>
+              <td class="sr-number">${mobile}</td>
+              <td class="sr-number">${district}</td>
+              <td class="sr-number">${headquarter}</td>
+            </tr>
           </tbody>
         </table>
       `;
     }
     
     function updateCarousel(index, direction = 'right') {
-      // Add slide out animation
       carouselContent.classList.add(direction === 'left' ? 'slide-out-left' : 'slide-out-right');
       
       setTimeout(() => {
-        const winners = carouselItems[index] || [];
-        const startIndex = index * 10;
+        const item = carouselItems[index] || null;
         
-        carouselContent.innerHTML = createTableHTML(winners, startIndex);
+        carouselContent.innerHTML = createTableHTML(item);
         carouselContent.classList.remove('slide-out-left', 'slide-out-right', 'loaded');
         
-        // Trigger slide in animation
+        // Update counter label
+        counterLabel.textContent = carouselItems.length > 0
+          ? `Winner ${index + 1} of ${carouselItems.length}`
+          : '';
+
         setTimeout(() => {
           carouselContent.classList.add('loaded');
         }, 50);
@@ -702,18 +678,31 @@
 
     function renderDots() {
       carouselDots.innerHTML = "";
-      carouselItems.forEach((_, index) => {
+      // Only render dots if manageable count; else show scroll dots
+      const MAX_DOTS = 50;
+      const total = carouselItems.length;
+      const showCount = Math.min(total, MAX_DOTS);
+
+      for (let i = 0; i < showCount; i++) {
         const dot = document.createElement("span");
         dot.className = `w-3 h-3 rounded-full cursor-pointer dot-indicator ${
-          index === currentIndex ? "active" : ""
+          i === currentIndex ? "active" : ""
         }`;
         dot.addEventListener("click", () => {
-          const direction = index > currentIndex ? 'right' : 'left';
-          currentIndex = index;
+          const direction = i > currentIndex ? 'right' : 'left';
+          currentIndex = i;
           updateCarousel(currentIndex, direction);
+          // Scroll active dot into view
+          dot.scrollIntoView({ inline: 'center', behavior: 'smooth', block: 'nearest' });
         });
         carouselDots.appendChild(dot);
-      });
+      }
+
+      // Scroll active dot into view
+      const activeDot = carouselDots.children[currentIndex];
+      if (activeDot) {
+        activeDot.scrollIntoView({ inline: 'center', behavior: 'smooth', block: 'nearest' });
+      }
     }
     
     function createConfettiBurst() {
@@ -729,23 +718,15 @@
           z-index: 2000;
           animation: confettiFall ${2 + Math.random() * 2}s ease-out forwards;
         `;
-        
         confetti.style.left = Math.random() * window.innerWidth + 'px';
         confetti.style.top = '-10px';
-        
         document.body.appendChild(confetti);
-        
-        setTimeout(() => {
-          if (confetti.parentNode) {
-            confetti.parentNode.removeChild(confetti);
-          }
-        }, 4000);
+        setTimeout(() => { if (confetti.parentNode) confetti.parentNode.removeChild(confetti); }, 4000);
       }
     }
 
     startButton.addEventListener("click", () => {
       initialButtonContainer.classList.add("hidden");
-
       if (hasSpun) {
         carouselContainer.classList.remove("hidden");
         updateCarousel(currentIndex);
@@ -764,9 +745,7 @@
         wheelContainer.classList.add("hidden");
         carouselContainer.classList.remove("hidden");
         
-        // Ensure data is loaded before showing carousel
         if (!dataLoaded) {
-          console.log('Data not loaded yet, waiting...');
           loadWinnersData(() => {
             updateCarousel(currentIndex);
             hasSpun = true;
@@ -797,15 +776,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
